@@ -1,4 +1,4 @@
-html, body{
+html, body {
     margin: 0;
     min-width: 100vw;
     min-height: 100vh;
@@ -7,9 +7,10 @@ html, body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
-main{
+main {
     width: 100%;
     flex: 1;
     display: flex;
@@ -18,17 +19,43 @@ main{
     align-items: center;
 }
 
-
 .buttons {
-    width: 75%;
+    min-width: 300px;
+    width: 35%;
     display: grid;
     grid-gap: 5px;
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto auto;
 }
 
-.btn{ 
+.btn {
     width: 20%;
     height: 48px;
     font-size: 24px !important;
+}
+
+header {
+    background: #39434e;
+    padding: 0 20px;
+    width: 100%
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    h1{
+        margin: 0;
+        padding: 0;
+    }
+    header div{
+        flex-direction: column;
+        padding: 0 20px;
+        text-align: center;
+    }
 }
